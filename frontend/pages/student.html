@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Sinh viên</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="../js/web3.js"></script>
+  <script src="../js/contract.js"></script>
+  <script src="../js/app.js"></script>
+</head>
+
+<body onload="initWeb3()"
+      class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-8 rounded-xl shadow-lg w-[420px] space-y-4">
+    <h2 class="text-xl font-bold text-indigo-600 text-center">
+      👨‍🎓 Quản lý sinh viên
+    </h2>
+
+    <input id="wallet"
+      class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400"
+      placeholder="Ví sinh viên">
+
+    <input id="sid"
+      class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400"
+      placeholder="Mã sinh viên">
+
+    <input id="name"
+      class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400"
+      placeholder="Họ tên">
+
+    <input id="dob"
+      class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400"
+      placeholder="Ngày sinh">
+
+    <input id="course"
+      class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400"
+      placeholder="Khóa học">
+
+    <button onclick="createStudent()"
+      class="w-full bg-indigo-500 text-white py-2 rounded-lg hover:bg-indigo-600">
+      Tạo sinh viên
+    </button>
+
+    <hr>
+
+    <input id="checkWallet"
+      class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-400"
+      placeholder="Ví sinh viên">
+
+    <button onclick="getStudent()"
+      class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600">
+      Xem thông tin
+    </button>
+
+    <pre id="result"
+      class="bg-gray-100 p-3 rounded text-sm whitespace-pre-wrap"></pre>
+
+    <a href="../index.html"
+      class="block text-center text-indigo-500 hover:underline">
+      ⬅ Quay lại
+    </a>
+  </div>
+
+</body>
+</html>
